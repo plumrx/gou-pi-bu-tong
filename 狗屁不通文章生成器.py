@@ -120,9 +120,9 @@ def create_text():
 	text_after = random.choice(后缀)
 	text_bosh = random.choice(空话)
 
-	text1 = text_before + text_people + text_word + text_bosh
-	text2 = text_people + text_word + text_after + text_bosh
-	text_list=[text1,text2]
+	text1 = text_people + text_before + text_word + text_bosh
+	text2 = text_people + text_before + text_word
+	text_list = [text1, text2]
 	return random.choice(text_list)
 
 
@@ -138,7 +138,7 @@ while len(文章) < 800:
 	else:
 		文章 = 文章 + create_text()
 
-文章=文章.replace('x',主题)
+文章 = 文章.replace('x', 主题)
 # 把生成的文章写在 txt 文件中
 f = open("狗屁不通文章.txt", 'w')
 
